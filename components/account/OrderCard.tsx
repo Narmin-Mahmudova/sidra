@@ -24,9 +24,9 @@ export default function OrderCard({ order }: { order: Order }) {
         </p>
       </div>
 
-      <ul className="mt-4 flex gap-3">
+      <ul className="mt-4 grid grid-cols-3 gap-3 sm:flex">
         {order.items.map((i) => (
-          <li key={i.id}><Thumb src={i.image} alt={i.name} className="h-20 w-20 sm:h-24 sm:w-24" /></li>
+          <li key={i.id}><Thumb src={i.image} alt={i.name} className="aspect-square w-full sm:h-24 sm:w-24" /></li>
         ))}
       </ul>
 
